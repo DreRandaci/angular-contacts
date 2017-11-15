@@ -6,15 +6,15 @@ app.config(function($routeProvider){
         templateUrl: 'partials/login.html',
         controller: 'LoginCtrl'
     })
-    .when( "/contacts-favorites", {
+    .when( "/contacts/favorites", {
         templateUrl: 'partials/contacts-favorites.html',
         controller: 'FavoritesCtrl'
     })
-    .when( "/contacts-new", {
+    .when( "/contacts/new", {
         templateUrl: 'partials/contacts-new.html',
         controller: 'NewCtrl'
     })
-    .when( "/contacts-view", {
+    .when( "/contacts/view", {
         templateUrl: 'partials/contacts-view.html',
         controller: 'ViewCtrl'
     })    
