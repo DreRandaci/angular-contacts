@@ -1,6 +1,9 @@
 body {
-  background-color: #08b5e9;
+  background-color: #087ce9;
   color: white; }
 
 a {
   color: white; }
+
+.nav_margin_fix {
+  margin: 10px 10px; }
