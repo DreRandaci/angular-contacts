@@ -13,7 +13,7 @@
 
 <body ng-app='ContactsApp'>
 
-    <div ng-include="'./partials/navbar.html'"></div>
+    <div ng-include="'./partials/navbar.html'" id='nav_container'></div>
     <div ng-view></div>
 
 
@@ -32,6 +32,7 @@
     
     <script type="text/javascript" src="javascripts/services/LoginService.js"></script>
 
+    <script type="text/javascript" src="javascripts/controllers/NavCtrl.js"></script>
     <script type="text/javascript" src="javascripts/controllers/LoginCtrl.js"></script>
     <script type="text/javascript" src="javascripts/controllers/FavoritesCtrl.js"></script>    
     <script type="text/javascript" src="javascripts/controllers/NewCtrl.js"></script>
