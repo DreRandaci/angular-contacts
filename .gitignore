@@ -3,3 +3,4 @@ javascripts/AppConstants.js
 lib/node_modules
 lib/package-lock.json
 public
+vendor

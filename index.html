@@ -6,17 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Angular Contacts</title>
     <link rel="stylesheet" type='text/css' href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
 <body ng-app='ContactsApp'>
 
-    <div ng-include="'./partials/navbar.html'"></div>
+    <div ng-include="'./partials/navbar.html'" id='nav_container'></div>
     <div ng-view></div>
 
 
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-
+    <script src="https://use.fontawesome.com/fe901e7f56.js"></script>
+    
     <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
@@ -28,6 +31,9 @@
     <script type="text/javascript" src="javascripts/AppConstants.js"></script>
     <script type="text/javascript" src="javascripts/AppConfig.js"></script>
     
+    <script type="text/javascript" src="javascripts/services/LoginService.js"></script>
+
+    <script type="text/javascript" src="javascripts/controllers/NavCtrl.js"></script>
     <script type="text/javascript" src="javascripts/controllers/LoginCtrl.js"></script>
     <script type="text/javascript" src="javascripts/controllers/FavoritesCtrl.js"></script>    
     <script type="text/javascript" src="javascripts/controllers/NewCtrl.js"></script>

@@ -1,0 +1,114 @@
+{
+    "contacts": {
+        "contact0": {
+            "name_first": "Dan0",
+            "name_last": "Danimal0",
+            "address": "123 Fake Street0",
+            "birthday": "April, 0",
+            "company": "The Dan Company0",
+            "email": "Danimal0@idk.com",
+            "phone": 1234567899,
+            "id": 0,
+            "uid": "8RorMjb02KOK3qamC9q3Pk3xiyF3"
+        },
+        "contact1": {
+            "name_first": "Dan1",
+            "name_last": "Danimal1",
+            "address": "123 Fake Street1",
+            "birthday": "April, 1",
+            "company": "The Dan Company1",
+            "email": "Danimal1@idk.com",
+            "phone": 1234567899,
+            "id": 1,
+            "uid": "8RorMjb02KOK3qamC9q3Pk3xiyF3"
+        },
+        "contact2": {
+            "name_first": "Dan2",
+            "name_last": "Danimal2",
+            "address": "123 Fake Street2",
+            "birthday": "April, 2",
+            "company": "The Dan Company2",
+            "email": "Danimal2@idk.com",
+            "phone": 1234567899,
+            "id": 2,
+            "uid": "8RorMjb02KOK3qamC9q3Pk3xiyF3"
+        },
+        "contact3": {
+            "name_first": "Dan3",
+            "name_last": "Danimal3",
+            "address": "123 Fake Street3",
+            "birthday": "April, 3",
+            "company": "The Dan Company3",
+            "email": "Danimal3@idk.com",
+            "phone": 1234567899,
+            "id": 3,
+            "uid": "8RorMjb02KOK3qamC9q3Pk3xiyF3"
+        },
+        "contact4": {
+            "name_first": "Dan4",
+            "name_last": "Danimal4",
+            "address": "123 Fake Street4",
+            "birthday": "April, 4",
+            "company": "The Dan Company4",
+            "email": "Danimal4@idk.com",
+            "phone": 1234567899,
+            "id": 4,
+            "uid": "8RorMjb02KOK3qamC9q3Pk3xiyF3"
+        },
+        "contact5": {
+            "name_first": "Dan5",
+            "name_last": "Danimal5",
+            "address": "123 Fake Street5",
+            "birthday": "April, 5",
+            "company": "The Dan Company5",
+            "email": "Danimal5@idk.com",
+            "phone": 1234567899,
+            "id": 5,
+            "uid": ""
+        },
+        "contact6": {
+            "uid": "",
+            "name_first": "Dan6",
+            "name_last": "Danimal6",
+            "address": "123 Fake Street6",
+            "birthday": "April, 6",
+            "company": "The Dan Company6",
+            "email": "Danimal6@idk.com",
+            "phone": 1234567899,
+            "id": 6            
+        },
+        "contact7": {
+            "uid": "",
+            "name_first": "Dan7",
+            "name_last": "Danimal7",
+            "address": "123 Fake Street7",
+            "birthday": "April, 7",
+            "company": "The Dan Company7",
+            "email": "Danimal7@idk.com",
+            "phone": 1234567899,
+            "id": 7
+        },
+        "contact8": {
+            "uid": "",
+            "name_first": "Dan8",
+            "name_last": "Danimal8",
+            "address": "123 Fake Street8",
+            "birthday": "April, 8",
+            "company": "The Dan Company8",
+            "email": "Danimal8@idk.com",
+            "phone": 1234567899,
+            "id": 8
+        },
+        "contact9": {
+            "uid": "",
+            "name_first": "Dan9",
+            "name_last": "Danimal9",
+            "address": "123 Fake Street9",
+            "birthday": "April, 9",
+            "company": "The Dan Company9",
+            "email": "Danimal9@idk.com",
+            "phone": 1234567899,
+            "id": 9
+        }    
+    }
+}

@@ -1,9 +1,32 @@
 @import 'colors';
 
 body {
-    background-color: $foam-green;
-    color: $white-text;
+    background-color: $background-color;
 }
 a {
-    color: $white-text; 
+    color: $link-color; 
+}
+#nav_container {
+    width: 12%;    
+}
+.nav_margin_fix {
+    margin: 10px 25px;
+}
+.nav-stacked>li>a {
+    border-radius: 0px;
+}
+.nav-pills>li>a {
+    border-radius: 0px;
+    width: 100%;
+}
+.contacts_nav {
+    padding-top: 1em;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #3a3a3a;
+}
+a:focus, a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
