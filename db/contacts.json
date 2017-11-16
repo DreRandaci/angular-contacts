@@ -1,6 +1,17 @@
 {
-    "contacts": [
-        {
+    "contacts": {
+        "contact0": {
+            "name_first": "Dan0",
+            "name_last": "Danimal0",
+            "address": "123 Fake Street0",
+            "birthday": "April, 0",
+            "company": "The Dan Company0",
+            "email": "Danimal0@idk.com",
+            "phone": 1234567899,
+            "id": 0,
+            "uid": ""
+        },
+        "contact1": {
             "name_first": "Dan1",
             "name_last": "Danimal1",
             "address": "123 Fake Street1",
@@ -8,9 +19,10 @@
             "company": "The Dan Company1",
             "email": "Danimal1@idk.com",
             "phone": 1234567899,
-            "id": 1
+            "id": 1,
+            "uid": ""
         },
-        {
+        "contact2": {
             "name_first": "Dan2",
             "name_last": "Danimal2",
             "address": "123 Fake Street2",
@@ -18,9 +30,10 @@
             "company": "The Dan Company2",
             "email": "Danimal2@idk.com",
             "phone": 1234567899,
-            "id": 2
+            "id": 2,
+            "uid": ""
         },
-        {
+        "contact3": {
             "name_first": "Dan3",
             "name_last": "Danimal3",
             "address": "123 Fake Street3",
@@ -28,9 +41,10 @@
             "company": "The Dan Company3",
             "email": "Danimal3@idk.com",
             "phone": 1234567899,
-            "id": 3
+            "id": 3,
+            "uid": ""
         },
-        {
+        "contact4": {
             "name_first": "Dan4",
             "name_last": "Danimal4",
             "address": "123 Fake Street4",
@@ -38,9 +52,10 @@
             "company": "The Dan Company4",
             "email": "Danimal4@idk.com",
             "phone": 1234567899,
-            "id": 4
+            "id": 4,
+            "uid": ""
         },
-        {
+        "contact5": {
             "name_first": "Dan5",
             "name_last": "Danimal5",
             "address": "123 Fake Street5",
@@ -48,9 +63,11 @@
             "company": "The Dan Company5",
             "email": "Danimal5@idk.com",
             "phone": 1234567899,
-            "id": 5
+            "id": 5,
+            "uid": ""
         },
-        {
+        "contact6": {
+            "uid": "",
             "name_first": "Dan6",
             "name_last": "Danimal6",
             "address": "123 Fake Street6",
@@ -58,9 +75,10 @@
             "company": "The Dan Company6",
             "email": "Danimal6@idk.com",
             "phone": 1234567899,
-            "id": 6
+            "id": 6            
         },
-        {
+        "contact7": {
+            "uid": "",
             "name_first": "Dan7",
             "name_last": "Danimal7",
             "address": "123 Fake Street7",
@@ -70,7 +88,8 @@
             "phone": 1234567899,
             "id": 7
         },
-        {
+        "contact8": {
+            "uid": "",
             "name_first": "Dan8",
             "name_last": "Danimal8",
             "address": "123 Fake Street8",
@@ -80,7 +99,8 @@
             "phone": 1234567899,
             "id": 8
         },
-        {
+        "contact9": {
+            "uid": "",
             "name_first": "Dan9",
             "name_last": "Danimal9",
             "address": "123 Fake Street9",
@@ -89,16 +109,6 @@
             "email": "Danimal9@idk.com",
             "phone": 1234567899,
             "id": 9
-        },
-        {
-            "name_first": "Dan10",
-            "name_last": "Danimal10",
-            "address": "123 Fake Street10",
-            "birthday": "April, 10",
-            "company": "The Dan Company10",
-            "email": "Danimal10@idk.com",
-            "phone": 1234567899,
-            "id": 10
-        }
-    ]
+        }    
+    }
 }
