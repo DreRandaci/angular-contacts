@@ -30,3 +30,9 @@ a:focus, a:hover {
     color: #ffffff;
     text-decoration: underline;
 }
+#new_contact {
+    .align_left {
+        position: relative;
+        right: 230px;
+    }
+}
