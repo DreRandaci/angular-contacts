@@ -1,17 +1,24 @@
-<div class='text-center' id='view_contacts'>
+<div class='' id='view_contacts'>
     <h1>Contacts</h1>
     <div id='contacts'>
         <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4 movie">
             <div class="thumbnail">                                    
                 <div class="caption">
-                    <h3>Id: {{contact.id}}</h3>
-                    <h3 class='name_first'>First Name: {{contact.name_first}}</h3>
-                    <h3 class='name_last'>Last Name: {{contact.name_last}}</h3>
-                    <h3 class='address'>Address: {{contact.address}}</h3>
-                    <h3 class='birthday'>Birthday: {{contact.birthday}}</h3>
-                    <h3 class='company'>Company: {{contact.company}}</h3>
-                    <h3 class='email'>Email: {{contact.email}}</h3>
-                    <h3 class='phone'>Phone: {{contact.phone}}</h3>
+
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{contact.name_first}} {{contact.name_last}}</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h4>Contact details</h4>
+                            <p class='phone'>Phone: {{contact.phone}}</p>
+                            <p class='address'>Address: {{contact.address}}</p>
+                            <p class='birthday'>Birthday: {{contact.birthday}}</p>
+                            <p class='company'>Company: {{contact.company}}</p>
+                            <p class='email'>Email: {{contact.email}}</p>      
+                        </div>
+                    </div>
+                    <button ng-click="deleteContact(contact.id)" class='btn btn-danger'>Remove</button>
                 </div>
             </div>
         </div>
