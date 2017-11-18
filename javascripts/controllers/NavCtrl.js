@@ -5,6 +5,6 @@ app.controller( "NavCtrl", function( $rootScope, $scope, $window, $location, Log
         delete $rootScope.uid;
         $window.localStorage.clear();
         LoginService.logout();
-        $location.path('./login');
+        $location.path('/login');
     };
 });

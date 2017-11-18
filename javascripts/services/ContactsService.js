@@ -8,9 +8,9 @@ app.service("ContactsService", function( $http, $q, FIREBASE_CONFIG ){
                 let fbContacts = results.data;
                 Object.keys(fbContacts).forEach(( key ) => {
                     fbContacts[key].id = key;
-                    contacts.push(fbContacts[key]);
-                    resolve(contacts);
+                    contacts.push(fbContacts[key]);                    
                 });
+                resolve(contacts);
             }).catch((err) => {
                 console.log('error in getRatedMovies:', err);
             });
