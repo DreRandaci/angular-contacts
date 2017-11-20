@@ -15,7 +15,7 @@
                         <div class="panel-heading">                                
                             <div class='icon_positioning'>
                                 <a ng-click="changeFavorite(contact, contact.id)"><i id="star" ng-class="{'fa fa-star-o': !contact.favorite, 'fa fa-star': contact.favorite}" aria-hidden="true"></i></a>
-                                <a ng-click="editContact(contact, contact.id)"><i id="pencil" class="fa fa-pencil" aria-hidden="true"></i></a>
+                                <a ng-click="editContact(contact.id)"><i id="pencil" class="fa fa-pencil" aria-hidden="true"></i></a>
                                 <a ng-click="deleteContact(contact.id)"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
                             </div>
                             <h1 class="panel-title">{{contact.name_first}} {{contact.name_last}}</h1>

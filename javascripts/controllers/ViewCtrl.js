@@ -28,8 +28,9 @@ app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsServ
         });
     };
 
-    $scope.editContact = () => {
-        console.log('edit clicked');
+
+    $scope.editContact = ( contactId ) => {
+        $location.path(`/contacts/edit/${contactId}`);
     };
 
     $scope.routeToNewContacts = () => {        

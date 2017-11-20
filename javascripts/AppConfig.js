@@ -60,7 +60,7 @@ app.config(function($routeProvider){
         resolve: {isAuth}
     })
     .when( "/contacts/edit/:id", {
-        templateUrl: 'partials/contacts-edit.html',
+        templateUrl: 'partials/contact-edit.html',
         controller: 'EditCtrl', 
         resolve: {isAuth}
     })        
