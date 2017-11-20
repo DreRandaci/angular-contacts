@@ -7,6 +7,7 @@
 
                     <div class="panel panel_margin_fix panel-info">
                         <div class="panel-heading">
+                                <a ng-click=""><i id="star" class="fa fa-star-o" aria-hidden="true"></i></a>
                                 <a ng-click="deleteContact(contact.id)"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
                             <h1 class="panel-title">{{contact.name_first}} {{contact.name_last}}</h1>
                         </div>
@@ -18,9 +19,7 @@
                             <p class='company'><i class="fa fa-briefcase" aria-hidden="true"></i> {{contact.company}}</p>
                             <p class='email'><i class="fa fa-envelope" aria-hidden="true"></i> {{contact.email}}</p>      
                         </div>
-                    </div>
-                    
-                    <!-- <button ng-click="deleteContact(contact.id)" class='btn btn-danger'>Remove</button> -->
+                    </div>                
                 </div>
             </div>
         </div>

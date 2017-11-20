@@ -24,5 +24,24 @@ app.service("ContactsService", function( $http, $q, FIREBASE_CONFIG ){
             return $http.delete(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`);
         };
 
-    return { getAllContacts, postNewContact, deleteContactInFb };
+        const updateContact = ( updatedMovie, movieId ) => {
+            return $http.put(`${FIREBASE_CONFIG.databaseURL}/movies/${movieId}.json`, JSON.stringify(updatedMovie));
+        };
+    
+        const createContactObj = (contact) => {
+            return {
+                "name_first": contact.name_first,
+                "name_last": contact.name_last,
+                "address": contact.address,
+                "company": contact.company,
+                "birthday": contact.birthday,
+                "email": contact.email,
+                "uid": contact.uid,
+                "phone": contact.phone,
+                "id": contact.id,
+                "favorite": false
+            };
+        };
+
+    return { getAllContacts, postNewContact, deleteContactInFb, updateContact, createContactObj };
 });
