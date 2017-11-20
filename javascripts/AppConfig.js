@@ -58,6 +58,11 @@ app.config(function($routeProvider){
         templateUrl: 'partials/contacts-view.html',
         controller: 'ViewCtrl', 
         resolve: {isAuth}
-    })    
+    })
+    .when( "/contacts/edit/:id", {
+        templateUrl: 'partials/contacts-edit.html',
+        controller: 'EditCtrl', 
+        resolve: {isAuth}
+    })        
     .otherwise('/login');
 });

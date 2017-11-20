@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('ViewCtrl', function( $rootScope, $scope, ContactsService ){
+app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsService ){
 
     const getContacts = () => {
         ContactsService.getAllContacts($rootScope.uid).then((results) => {            
@@ -16,6 +16,24 @@ app.controller('ViewCtrl', function( $rootScope, $scope, ContactsService ){
         }).catch((err) => {
             console.log('error in deleteContactInFb:', err);
         });  
+    };
+
+    $scope.changeFavorite = ( contact, contactId ) => {        
+        contact.favorite = contact.favorite ? false : true;        
+        let favoriteContact = ContactsService.createContactObj( contact );
+        ContactsService.updateContact( favoriteContact, contactId ).then(() => {
+            getContacts();
+        }).catch((err) => {
+            console.log('error in updateContact:', err);
+        });
+    };
+
+    $scope.editContact = () => {
+        console.log('edit clicked');
+    };
+
+    $scope.routeToNewContacts = () => {        
+        $location.path("/contacts/new");
     };
 
     getContacts();

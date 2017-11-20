@@ -1,6 +1,12 @@
-<div class='' id='view_contacts' ng-controller="ViewCtrl">        
-    <h1 id="contacts_heading">Contacts</h1>
+<div class='view_contacts'>        
+    <h1 ng-show="contacts.length" id="contacts_heading">Contacts</h1>
     <div id='contacts'>
+        <div ng-show="!contacts.length">
+            <div class="text-center">
+                <h1>Looks like you need some friends.</h1>                    
+                <button ng-click="routeToNewContacts()" class="btn btn-primary new-btn">Add Contact</button> 
+            </div>     
+        </div>
         <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4">
             <div class="thumbnail contact">                                    
                 <div class="caption">
@@ -8,7 +14,8 @@
                     <div class="panel panel_margin_fix panel-info">
                         <div class="panel-heading">                                
                             <div class='icon_positioning'>
-                                    <a ng-click=""><i id="star" class="fa fa-star-o" aria-hidden="true"></i></a>
+                                <a ng-click="changeFavorite(contact, contact.id)"><i id="star" ng-class="{'fa fa-star-o': !contact.favorite, 'fa fa-star': contact.favorite}" aria-hidden="true"></i></a>
+                                <a ng-click="editContact(contact, contact.id)"><i id="pencil" class="fa fa-pencil" aria-hidden="true"></i></a>
                                 <a ng-click="deleteContact(contact.id)"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
                             </div>
                             <h1 class="panel-title">{{contact.name_first}} {{contact.name_last}}</h1>
