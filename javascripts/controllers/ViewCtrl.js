@@ -10,12 +10,13 @@ app.controller('ViewCtrl', function( $rootScope, $scope, ContactsService ){
         });
     };
 
-    $scope.deleteContact = (contactId) => {
+    $scope.deleteContact = ( contactId ) => {
         ContactsService.deleteContactInFb(contactId).then((results) => {
             getContacts();
         }).catch((err) => {
             console.log('error in deleteContactInFb:', err);
         });  
     };
+
     getContacts();
 });

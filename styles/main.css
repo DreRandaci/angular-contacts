@@ -29,20 +29,12 @@ a:focus, a:hover {
   right: 230px;
   margin-bottom: 15px; }
 
-.fa-trash-o {
-  position: absolute;
-  left: 420px; }
-
 #contacts_heading {
   margin-left: 18px; }
 
 #view_contacts {
   margin-left: 190px;
   margin-top: -220px; }
-
-#trash {
-  position: absolute;
-  left: 363px; }
 
 .panel_margin_fix {
   margin-bottom: 2px; }
@@ -53,4 +45,8 @@ a:focus, a:hover {
   border-color: #bce8f1; }
 
 .contact {
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.75); }
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.75);
+  position: relative; }
+
+.icon_positioning {
+  float: right; }

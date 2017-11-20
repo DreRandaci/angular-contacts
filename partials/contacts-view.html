@@ -1,4 +1,4 @@
-<div class='' id='view_contacts'>        
+<div class='' id='view_contacts' ng-controller="ViewCtrl">        
     <h1 id="contacts_heading">Contacts</h1>
     <div id='contacts'>
         <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4">
@@ -6,9 +6,11 @@
                 <div class="caption">
 
                     <div class="panel panel_margin_fix panel-info">
-                        <div class="panel-heading">
-                                <a ng-click=""><i id="star" class="fa fa-star-o" aria-hidden="true"></i></a>
+                        <div class="panel-heading">                                
+                            <div class='icon_positioning'>
+                                    <a ng-click=""><i id="star" class="fa fa-star-o" aria-hidden="true"></i></a>
                                 <a ng-click="deleteContact(contact.id)"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            </div>
                             <h1 class="panel-title">{{contact.name_first}} {{contact.name_last}}</h1>
                         </div>
                         <div class="panel-body">
@@ -18,8 +20,8 @@
                             <p class='birthday'><i class="fa fa-calendar" aria-hidden="true"></i> {{contact.birthday}}</p>
                             <p class='company'><i class="fa fa-briefcase" aria-hidden="true"></i> {{contact.company}}</p>
                             <p class='email'><i class="fa fa-envelope" aria-hidden="true"></i> {{contact.email}}</p>      
-                        </div>
-                    </div>                
+                        </div>              
+                    </div>            
                 </div>
             </div>
         </div>
