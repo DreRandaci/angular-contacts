@@ -9,14 +9,6 @@ app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsServ
         });
     };
 
-    // $scope.checkForContacts = () => {
-    //     ContactsService.checkForContacts().then(( results ) => {
-    //         console.log(results);
-    //     }).catch((err) => {
-    //         console.log('error in checkForContacts:', err);
-    //     });
-    // };
-
     $scope.deleteContact = ( contactId ) => {
         ContactsService.deleteContactInFb(contactId).then((results) => {
             getContacts();

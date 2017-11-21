@@ -1,6 +1,6 @@
 <div class='view_contacts'>        
-    <h1 ng-if="contacts.length > 0" id="contacts_heading">Favorites</h1>
-    <div id='contacts'>
+    <h1 ng-if="contacts.length > 0" class="contacts_heading">Favorites</h1>
+    <div id='favorite_contacts'>
         <div ng-if="contacts.length == 0">
             <div class="text-center">
                 <h1>Looks like you need some friends.</h1>                    
@@ -15,7 +15,7 @@
                         <div class="panel-heading">                                
                             <div class='icon_positioning'>
                                 <a ng-click="changeFavorite(contact, contact.id)"><i id="star" ng-class="{'fa fa-star-o': !contact.favorite, 'fa fa-star': contact.favorite}" aria-hidden="true"></i></a>
-                                <a ng-click="editContact(contact, contact.id)"><i id="pencil" class="fa fa-pencil" aria-hidden="true"></i></a>
+                                <a ng-click="editContact(contact.id)"><i id="pencil" class="fa fa-pencil" aria-hidden="true"></i></a>
                                 <a ng-click="deleteContact(contact.id)"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
                             </div>
                             <h1 class="panel-title">{{contact.name_first}} {{contact.name_last}}</h1>

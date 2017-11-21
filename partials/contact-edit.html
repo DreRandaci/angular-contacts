@@ -1,6 +1,6 @@
 <div id='edit_contact' class='text-center container'>    
         <h4>Edit Contact</h4>
-        <form name='contactsForm' class="form-horizontal">
+        <form name='editForm' class="form-horizontal">
             <div class="form-group">
                     <div class="col-md-6 col-md-offset-3 text-center">
                     <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" ng-model="contact.name_first" ng-required="true">                    
@@ -36,7 +36,7 @@
                     <input type="text" class="form-control" id="inputCompany" placeholder="Company" ng-model="contact.company" ng-required="true">
                 </div>
             </div>                            
-            <button ng-disabled="contactsForm.$invalid" type="button" class="btn btn-default" ng-click="submitThisForm(contact)">Save Contact</button>
+            <button ng-disabled="editForm.$invalid" type="button" class="btn btn-default" ng-click="submitThisForm(contact)">Save Contact</button>
         </form>    
     </div>
     

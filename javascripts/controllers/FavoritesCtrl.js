@@ -28,8 +28,8 @@ app.controller('FavoritesCtrl', function( $location, $rootScope, $scope, Contact
         });
     };
 
-    $scope.editContact = () => {
-        console.log('edit clicked');
+    $scope.editContact = ( contactId ) => {
+        $location.path(`/contacts/edit/${contactId}`);
     };
 
     $scope.routeToNewContacts = () => {        
