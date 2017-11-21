@@ -1,9 +1,11 @@
-<ul class="nav nav-pills nav_margin_fix" ng-show="!uid">
-    <li role="presentation"><a ng-href="#!/login">Login</a></li>        
-</ul>
-<ul class="nav nav-pills nav-stacked contacts_nav" ng-show="uid">        
-    <li role="presentation"><a ng-href="#!/contacts/view">View Contacts</a></li>
-    <li role="presentation"><a ng-href="#!/contacts/favorites">Favorites</a></li>
-    <li role="presentation"><a ng-href="#!/contacts/new">Create New Contact</a></li>
-    <li role="presentation"><a ng-href="#!/login">Logout</a></li>
-</ul>
+<div ng-controller="NavCtrl">
+    <ul class="nav" ng-show="!uid">
+        <li role="presentation"><a ng-href="#!/login">Login</a></li>        
+    </ul>
+    <ul class="nav nav-pills nav-stacked contacts_nav" ng-show="uid">        
+        <li role="presentation"><a ng-href="#!/contacts/view">View Contacts</a></li>
+        <li role="presentation"><a ng-href="#!/contacts/favorites">Favorites</a></li>
+        <li role="presentation"><a ng-href="#!/contacts/new">Create New Contact</a></li>
+        <li role="presentation"><a ng-click="logoutUser()">Logout</a></li>
+    </ul>
+</div>

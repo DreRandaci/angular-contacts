@@ -1,4 +1,28 @@
-<div class='text-center' id='view_contacts'>
-    <h1>Hello</h1>
-    {{controller}}
+<div class='' id='view_contacts' ng-controller="ViewCtrl">        
+    <h1 id="contacts_heading">Contacts</h1>
+    <div id='contacts'>
+        <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4">
+            <div class="thumbnail contact">                                    
+                <div class="caption">
+
+                    <div class="panel panel_margin_fix panel-info">
+                        <div class="panel-heading">
+                            <div class='icon_positioning'>
+                                <a ng-click="deleteContact(contact.id)"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            </div>
+                            <h1 class="panel-title">{{contact.name_first}} {{contact.name_last}}</h1>
+                        </div>
+                        <div class="panel-body">
+                            <h4><i class="fa fa-info" aria-hidden="true"></i> Contact details</h4>
+                            <p class='phone'><i class="fa fa-phone" aria-hidden="true"></i> {{contact.phone}}</p>
+                            <p class='address'><i class="fa fa-address-card" aria-hidden="true"></i> {{contact.address}}</p>
+                            <p class='birthday'><i class="fa fa-calendar" aria-hidden="true"></i> {{contact.birthday}}</p>
+                            <p class='company'><i class="fa fa-briefcase" aria-hidden="true"></i> {{contact.company}}</p>
+                            <p class='email'><i class="fa fa-envelope" aria-hidden="true"></i> {{contact.email}}</p>      
+                        </div>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
