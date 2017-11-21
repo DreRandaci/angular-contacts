@@ -4,11 +4,6 @@ app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsServ
     const getContacts = () => {
         ContactsService.getAllContacts($rootScope.uid).then((results) => {            
             $scope.contacts = results; 
-            if ($scope.contacts.length > 0) {
-                return true;
-            } else {
-                return false;
-            }
         }).catch((err) => {
             console.log('error in getRatedMovies:', err);
         });
