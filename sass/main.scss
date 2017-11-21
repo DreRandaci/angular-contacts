@@ -77,6 +77,11 @@ a:focus, a:hover {
     margin-top: -210px;
 }
 #search_container {
+
+    position: absolute;
+    top: 14px;
+    left: 5px;
+
     .search-form .form-group {
         transition: all 0.35s, border-radius 0s;
         width: 32px;
@@ -125,5 +130,8 @@ a:focus, a:hover {
         color: #3596e0;
         left: initial;
         font-size: 14px;
+    }
+    .fix_search_width {
+        width: 28%;
     }
 }

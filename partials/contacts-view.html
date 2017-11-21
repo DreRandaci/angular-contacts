@@ -1,10 +1,10 @@
 <div class='view_contacts'>        
     <h1 ng-if="contacts.length > 0" id="contacts_heading">Contacts</h1>
     <div id="search_container" class="container">
-            <form action="" class="search-form">
+            <form action="" class="search-form fix_search_width">
                 <div class="form-group has-feedback">
                     <label for="search" class="sr-only">Search</label>
-                    <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                    <input type="text" class="form-control" name="search" id="search" placeholder="search contacts" ng-model="searchText">
                     <span class="glyphicon glyphicon-search form-control-feedback"></span>
                 </div>
             </form>
@@ -14,7 +14,7 @@
             <h1>Looks like you need some friends.</h1>                    
             <button ng-click="routeToNewContacts()" class="btn btn-primary new-btn">Add Contact</button> 
         </div>          
-        <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4">
+        <div ng-repeat="contact in contacts | filter: searchText" class="col-sm-6 col-md-4">
             <div class="thumbnail contact">                                    
                 <div class="caption">
 
