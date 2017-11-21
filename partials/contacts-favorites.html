@@ -1,7 +1,7 @@
 <div class='view_contacts'>        
-    <h1 ng-show="contacts.length" id="contacts_heading">Favorites</h1>
+    <h1 ng-if="contacts.length > 0" id="contacts_heading">Favorites</h1>
     <div id='contacts'>
-        <div ng-show="!contacts.length">
+        <div ng-if="contacts.length == 0">
             <div class="text-center">
                 <h1>Looks like you need some friends.</h1>                    
                 <button ng-click="routeToNewContacts()" class="btn btn-primary new-btn">Add Contact</button> 
