@@ -1,5 +1,5 @@
 <div class='view_contacts'>        
-    <h1 ng-if="contacts.length > 0" id="contacts_heading">Contacts</h1>
+    <h1 ng-if="contacts.length > 0" class="contacts_heading">Contacts</h1>
     <div id='contacts'>
         <div ng-if="contacts.length == 0" class="text-center">
             <h1>Looks like you need some friends.</h1>                    
@@ -20,11 +20,7 @@
                             <h1 class="panel-title">{{contact.name_first}} {{contact.name_last}}</h1>
                         </div>
                         <div class="panel-body">
-                            <!-- <h4><i class="fa fa-info" aria-hidden="true"></i> Contact details</h4> -->
-                            <p class='phone'><i class="fa fa-phone" aria-hidden="true"></i> {{contact.phone}}</p>
-                            <!-- <p class='address'><i class="fa fa-address-card" aria-hidden="true"></i> {{contact.address}}</p> -->
-                            <!-- <p class='birthday'><i class="fa fa-calendar" aria-hidden="true"></i> {{contact.birthday}}</p> -->
-                            <!-- <p class='company'><i class="fa fa-briefcase" aria-hidden="true"></i> {{contact.company}}</p> -->
+                            <p class='phone'><i class="fa fa-phone" aria-hidden="true"></i> {{contact.phone}}</p>                    
                             <p class='email'><i class="fa fa-envelope" aria-hidden="true"></i> {{contact.email}}</p>      
                         </div>              
                     </div>            

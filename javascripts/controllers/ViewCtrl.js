@@ -4,23 +4,10 @@ app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsServ
     const getContacts = () => {
         ContactsService.getAllContacts($rootScope.uid).then((results) => {            
             $scope.contacts = results; 
-            if ($scope.contacts.length > 0) {
-                return true;
-            } else {
-                return false;
-            }
         }).catch((err) => {
             console.log('error in getRatedMovies:', err);
         });
     };
-
-    // $scope.checkForContacts = () => {
-    //     ContactsService.checkForContacts().then(( results ) => {
-    //         console.log(results);
-    //     }).catch((err) => {
-    //         console.log('error in checkForContacts:', err);
-    //     });
-    // };
 
     $scope.deleteContact = ( contactId ) => {
         ContactsService.deleteContactInFb(contactId).then((results) => {
