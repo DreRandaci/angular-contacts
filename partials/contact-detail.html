@@ -27,6 +27,9 @@
                                     <button class="btn btn-default btn-sm" ng-click="addPic(contact, contact.id)">Submit</button>                                
                                 </div>
                             </form>
+                        <div ng-show="contact.filetype">
+                            <img ng-class="{'img_size': contact.filetype}" src="data:{{contact.filetype}};base64,{{contact.base64}}">
+                        </div>
                         <h4><i class="fa fa-info" aria-hidden="true"></i> Contact details</h4>
                         <p class='phone'><i class="fa fa-phone" aria-hidden="true"></i> {{contact.phone}}</p>
                         <p class='address'><i class="fa fa-address-card" aria-hidden="true"></i> {{contact.address}}</p>
