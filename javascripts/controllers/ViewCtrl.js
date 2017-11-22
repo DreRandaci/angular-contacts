@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsService ){
+app.controller('ViewCtrl', function( $base64, $location, $rootScope, $scope, ContactsService ){
 
     const getContacts = () => {
         ContactsService.getAllContacts($rootScope.uid).then((results) => {            
