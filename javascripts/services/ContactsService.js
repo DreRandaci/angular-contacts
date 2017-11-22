@@ -36,6 +36,15 @@ app.service("ContactsService", function( $http, $q, FIREBASE_CONFIG ){
         });
     };
 
+    const uploadImageToFb = (newPic, contact, contactId) => {
+        let updatedContact = createContactObj(contact, newPic);
+        updateContact(updatedContact, contactId).then((results) => {
+            console.log("results:", results);
+        }).catch((err) => {
+            console.log("error in updateContact:", err);
+        });
+    };
+
     const getSingleContact = ( contactId ) => {
         return $http.get(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`);
     };
@@ -52,7 +61,7 @@ app.service("ContactsService", function( $http, $q, FIREBASE_CONFIG ){
         return $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`, JSON.stringify(updatedContact));
     };
 
-    const createContactObj = (contact) => {
+    const createContactObj = (contact, picInfo) => {
         return {
             "name_first": contact.name_first,
             "name_last": contact.name_last,
@@ -63,9 +72,13 @@ app.service("ContactsService", function( $http, $q, FIREBASE_CONFIG ){
             "uid": contact.uid,
             "phone": contact.phone,
             "id": contact.id,
-            "favorite": contact.favorite
+            "favorite": contact.favorite,
+            "base64": picInfo.base64,
+            "filename": picInfo.filename,
+            "filesize": picInfo.filesize,
+            "filetype": picInfo.filetype,
         };
     };
 
-    return { getAllContacts, postNewContact, deleteContactInFb, updateContact, createContactObj, getFavoriteContacts, getSingleContact };
+    return { getAllContacts, postNewContact, deleteContactInFb, updateContact, createContactObj, getFavoriteContacts, getSingleContact, uploadImageToFb };
 });

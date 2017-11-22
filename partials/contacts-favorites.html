@@ -1,10 +1,19 @@
 <div class='view_contacts'>        
     <h1 ng-if="contacts.length > 0" class="contacts_heading">Favorites</h1>
+    <div class="container search_container">
+        <form action="" class="search-form fix_search_width">
+            <div class="form-group has-feedback">
+                <label for="search" class="sr-only">Search</label>
+                <input type="text" class="form-control" name="search" id="search" placeholder="search favorites" ng-model="searchText">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+        </form>
+    </div>   
     <div id='favorite_contacts'>
         <div ng-if="contacts.length == 0">
             <div class="text-center">
-                <h1>Looks like you need some friends.</h1>                    
-                <button ng-click="routeToNewContacts()" class="btn btn-primary new-btn">Add Contact</button> 
+                <h1>Looks like you need to add some favorites.</h1>                    
+                <button ng-click="routeToNewContacts()" class="btn btn-primary new-btn">Add Contact to Favorites</button> 
             </div>    
         </div> 
         <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4">

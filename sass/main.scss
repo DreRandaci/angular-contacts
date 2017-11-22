@@ -57,6 +57,7 @@ a:focus, a:hover {
 .contact {
     box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.75);
     position: relative;
+    border-radius: 14px;
 }
 .icon_positioning {
     float: right;
@@ -70,13 +71,16 @@ a:focus, a:hover {
 #magnifying {
     padding-right: 5px;
 }
+#upload_icon {
+    padding-right: 5px;
+}
 #new_contact {
     margin-top: -210px;
 }
 #edit_contact {
     margin-top: -210px;
 }
-#search_container {
+.search_container {
 
     position: absolute;
     top: 14px;
@@ -134,4 +138,8 @@ a:focus, a:hover {
     .fix_search_width {
         width: 28%;
     }
+}
+.img_size {
+    width: 100px;
+    height: 100px;
 }

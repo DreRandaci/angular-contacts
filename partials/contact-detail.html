@@ -6,6 +6,7 @@
                 <div class="panel panel_margin_fix panel-info">
                     <div class="panel-heading">                                
                         <div class='icon_positioning'>
+                            <a ng-click="showImageUpload()"><i id="upload_icon" class="fa fa-upload" aria-hidden="true"></i></a>
                             <a ng-click="changeFavorite(contact, contact.id)"><i id="star" ng-class="{'fa fa-star-o': !contact.favorite, 'fa fa-star': contact.favorite}" aria-hidden="true"></i></a>
                             <a><i id="magnifying" class="fa fa-search" aria-hidden="true"></i></a>
                             <a ng-click="editContact(contact.id)"><i id="pencil" class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -14,6 +15,18 @@
                         <h1 class="panel-title">{{contact.name_first}} {{contact.name_last}}</h1>
                     </div>
                     <div class="panel-body">
+                            <form ng-show="!noImage">
+                                <div ng-show="!hideUploadOptions()">
+                                    <strong>Select a Picture</strong>
+                                    <input type="file" ng-model="pic" name="pic" base-sixty-four-input onload="onLoad" accept="image/*">
+                                </div>
+                                <div>
+                                    <img ng-class="{'img_size': pic}" src="data:{{pic.filetype}};base64,{{pic.base64}}">
+                                </div>
+                                <div ng-show="!hideUploadOptions()">
+                                    <button class="btn btn-default btn-sm" ng-click="addPic(contact, contact.id)">Submit</button>                                
+                                </div>
+                            </form>
                         <h4><i class="fa fa-info" aria-hidden="true"></i> Contact details</h4>
                         <p class='phone'><i class="fa fa-phone" aria-hidden="true"></i> {{contact.phone}}</p>
                         <p class='address'><i class="fa fa-address-card" aria-hidden="true"></i> {{contact.address}}</p>

@@ -1,6 +1,7 @@
 'use strict';
 
 app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsService ){
+    
     const getContacts = () => {
         ContactsService.getAllContacts($rootScope.uid).then((results) => {            
             $scope.contacts = results; 
@@ -8,6 +9,8 @@ app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsServ
             console.log('error in getRatedMovies:', err);
         });
     };
+
+    getContacts();
 
     $scope.deleteContact = ( contactId ) => {
         ContactsService.deleteContactInFb(contactId).then((results) => {
@@ -38,6 +41,4 @@ app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsServ
     $scope.routeToNewContacts = () => {        
         $location.path("/contacts/new");
     };
-
-    getContacts();
 });
