@@ -1,10 +1,18 @@
 'use strict';
 
-app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsService ){
-    
+app.controller('ViewCtrl', function( $location, $rootScope, $scope, $base64, ContactsService ){
+
     const getContacts = () => {
         ContactsService.getAllContacts($rootScope.uid).then((results) => {            
             $scope.contacts = results; 
+            // $scope.decode = $base64.decode(`${results[0].base64}`);
+            var base64EncodedString = $base64.encode(`${results[0].base64}`);
+            var urlSafeBase64EncodedString = encodeURIComponent(base64EncodedString);
+            var newbase64EncodedString = decodeURIComponent(`${urlSafeBase64EncodedString}`);
+            var decodedString = $base64.decode(newbase64EncodedString);
+            // let decoded = $base64.encode(`${results[0].base64}`);
+            // console.log(results);
+            console.log(decodedString);
         }).catch((err) => {
             console.log('error in getRatedMovies:', err);
         });
