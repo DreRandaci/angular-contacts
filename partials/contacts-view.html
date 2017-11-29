@@ -30,7 +30,7 @@
                         </div>
                         <div class="panel-body">
                             <div>
-                                <img ng-class="{'img_size': contact.filetype}" src="data:{{contact.filetype}};base64,{{contact.base64}}">
+                                <img ng-class="{'img_size': contact.filetype}" ng-src="data:{{contact.filetype}};base64,{{contact.base64}}">
                             </div>
                             <p class='phone'><i class="fa fa-phone" aria-hidden="true"></i> {{contact.phone}}</p>                    
                             <p class='email'><i class="fa fa-envelope" aria-hidden="true"></i> {{contact.email}}</p>      

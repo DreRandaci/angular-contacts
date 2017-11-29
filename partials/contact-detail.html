@@ -21,14 +21,14 @@
                                     <input type="file" ng-model="pic" name="pic" base-sixty-four-input onload="onLoad" accept="image/*">
                                 </div>
                                 <div>
-                                    <img ng-class="{'img_size': pic}" src="data:{{pic.filetype}};base64,{{pic.base64}}">
+                                    <img ng-class="{'img_size': pic}" ng-src="data:{{pic.filetype}};base64,{{pic.base64}}">
                                 </div>
                                 <div ng-show="!hideUploadOptions()">
                                     <button class="btn btn-default btn-sm" ng-click="addPic(contact, contact.id)">Submit</button>                                
                                 </div>
                             </form>
                         <div ng-show="contact.filetype">
-                            <img ng-class="{'img_size': contact.filetype}" src="data:{{contact.filetype}};base64,{{contact.base64}}">
+                            <img ng-class="{'img_size': contact.filetype}" ng-src="data:{{contact.filetype}};base64,{{contact.base64}}">
                         </div>
                         <h4><i class="fa fa-info" aria-hidden="true"></i> Contact details</h4>
                         <p class='phone'><i class="fa fa-phone" aria-hidden="true"></i> {{contact.phone}}</p>
