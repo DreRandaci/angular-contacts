@@ -39,7 +39,6 @@ app.service("ContactsService", function( $http, $q, FIREBASE_CONFIG ){
     const uploadImageToFb = (newPic, contact, contactId) => {
         let updatedContact = createContactObj(contact, newPic);
         updateContact(updatedContact, contactId).then((results) => {
-            console.log("results:", results);
         }).catch((err) => {
             console.log("error in updateContact:", err);
         });
