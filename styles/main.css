@@ -29,10 +29,10 @@ a:focus, a:hover {
   right: 230px;
   margin-bottom: 15px; }
 
-#contacts_heading {
+.contacts_heading {
   margin-left: 18px; }
 
-#view_contacts {
+.view_contacts {
   margin-left: 190px;
   margin-top: -220px; }
 
@@ -50,3 +50,18 @@ a:focus, a:hover {
 
 .icon_positioning {
   float: right; }
+
+#star {
+  padding-right: 5px; }
+
+#pencil {
+  padding-right: 5px; }
+
+#magnifying {
+  padding-right: 5px; }
+
+#new_contact {
+  margin-top: -210px; }
+
+#edit_contact {
+  margin-top: -210px; }

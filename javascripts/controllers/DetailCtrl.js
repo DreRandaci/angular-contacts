@@ -1,17 +1,20 @@
 'use strict';
 
-app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsService ){
-    const getContacts = () => {
-        ContactsService.getAllContacts($rootScope.uid).then((results) => {            
-            $scope.contacts = results; 
+app.controller('DetailCtrl', function( $location, $routeParams, $scope, ContactsService ){
+
+    $scope.contact = {};
+    
+    const getContact = () => {
+        ContactsService.getSingleContact($routeParams.id).then((results) => {
+            $scope.contact = results.data;
         }).catch((err) => {
-            console.log('error in getRatedMovies:', err);
+            console.log('error in getSingleContact:', err);
         });
-    };
+    };    
 
     $scope.deleteContact = ( contactId ) => {
         ContactsService.deleteContactInFb(contactId).then((results) => {
-            getContacts();
+            getContact();
         }).catch((err) => {
             console.log('error in deleteContactInFb:', err);
         });  
@@ -21,7 +24,7 @@ app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsServ
         contact.favorite = contact.favorite ? false : true;        
         let favoriteContact = ContactsService.createContactObj( contact );
         ContactsService.updateContact( favoriteContact, contactId ).then(() => {
-            getContacts();
+            getContact();
         }).catch((err) => {
             console.log('error in updateContact:', err);
         });
@@ -39,5 +42,5 @@ app.controller('ViewCtrl', function( $location, $rootScope, $scope, ContactsServ
         $location.path("/contacts/new");
     };
 
-    getContacts();
+    getContact();
 });
