@@ -1,9 +1,10 @@
 'use strict';
 
-app.controller('DetailCtrl', function( $location, $routeParams, $scope, ContactsService ){
+app.controller('DetailCtrl', function( $location, $routeParams, $scope, $base64, ContactsService ){
 
     $scope.contact = {};
-    
+    $scope.noImage = true;
+
     const getContact = () => {
         ContactsService.getSingleContact($routeParams.id).then((results) => {
             $scope.contact = results.data;
@@ -28,6 +29,23 @@ app.controller('DetailCtrl', function( $location, $routeParams, $scope, Contacts
         }).catch((err) => {
             console.log('error in updateContact:', err);
         });
+    };
+
+    $scope.addPic = (contact, contactId) => {        
+        $scope.hideUploadOptions = () => {
+            return true;
+        };
+        let newPic = {
+            base64: $scope.pic.base64,
+            filename: $scope.pic.filename,
+            filesize: $scope.pic.filesize,
+            filetype: $scope.pic.filetype,
+        };
+        ContactsService.uploadImageToFb(newPic, contact, contactId);
+    };
+
+    $scope.showImageUpload = () => {
+        $scope.noImage = false;
     };
 
     $scope.editContact = ( contactId ) => {

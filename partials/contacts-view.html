@@ -1,14 +1,23 @@
 <div class='view_contacts'>        
-    <h1 ng-if="contacts.length > 0" class="contacts_heading">Contacts</h1>
+    <h1 ng-if="contacts.length > 0" id="contacts_heading">Contacts</h1>
+    <div class="container search_container">
+            <form class="search-form fix_search_width">
+                <div class="form-group has-feedback">
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="text" class="form-control" name="search" id="search" placeholder="search contacts" ng-model="searchText">
+                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                </div>
+            </form>
+        </div>   
     <div id='contacts'>
         <div ng-if="contacts.length == 0" class="text-center">
-            <h1>Looks like you need some friends.</h1>                    
+            <h1>Looks like you need to add some contacts.</h1>                    
             <button ng-click="routeToNewContacts()" class="btn btn-primary new-btn">Add Contact</button> 
-        </div>     
-        <div ng-repeat="contact in contacts" class="col-sm-6 col-md-4">
-            <div class="thumbnail contact">                                    
-                <div class="caption">
+        </div>                
 
+        <div ng-repeat="contact in contacts | filter: searchText" class="col-sm-6 col-md-4">
+            <div class="thumbnail contact">                                    
+                <div class="caption">                    
                     <div class="panel panel_margin_fix panel-info">
                         <div class="panel-heading">                                
                             <div class='icon_positioning'>
@@ -20,6 +29,9 @@
                             <h1 class="panel-title">{{contact.name_first}} {{contact.name_last}}</h1>
                         </div>
                         <div class="panel-body">
+                            <div>
+                                <img ng-class="{'img_size': contact.filetype}" ng-src="data:{{contact.filetype}};base64,{{contact.base64}}">
+                            </div>
                             <p class='phone'><i class="fa fa-phone" aria-hidden="true"></i> {{contact.phone}}</p>                    
                             <p class='email'><i class="fa fa-envelope" aria-hidden="true"></i> {{contact.email}}</p>      
                         </div>              
