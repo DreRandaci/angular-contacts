@@ -72,10 +72,10 @@ app.service("ContactsService", function( $http, $q, FIREBASE_CONFIG ){
             "phone": contact.phone,
             "id": contact.id,
             "favorite": contact.favorite,
-            "base64": picInfo.base64,
-            "filename": picInfo.filename,
-            "filesize": picInfo.filesize,
-            "filetype": picInfo.filetype,
+            "base64": picInfo ? picInfo.base64 : contact.base64,
+            "filename": picInfo ? picInfo.filename : contact.filename,
+            "filesize": picInfo ? picInfo.filesize : contact.filesize,
+            "filetype": picInfo ? picInfo.filetype : contact.filetype,
         };
     };
 
